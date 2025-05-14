@@ -9,7 +9,7 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'quiz.dart';
 import 'leaderboard.dart';
-import 'match.dart';
+// import 'match.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -430,28 +430,29 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          FloatingActionButton(
-            heroTag: 'btn1',
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => MatchPage(deviceId: _deviceId!),
-                ),
-              );
-            },
-            backgroundColor: Colors.orange[400],
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-              side: const BorderSide(color: Colors.black, width: 3),
-            ),
-            child: Image.asset(
-              'assets/internet_mark.png',
-              width: 30,
-              height: 30,
-            ),
-          ),
-          const SizedBox(height: 10),
+          // オンライン対戦に遷移するボタン
+          // FloatingActionButton(
+          //   heroTag: 'btn1',
+          //   onPressed: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(
+          //         builder: (context) => MatchPage(deviceId: _deviceId!),
+          //       ),
+          //     );
+          //   },
+          //   backgroundColor: Colors.orange[400],
+          //   shape: RoundedRectangleBorder(
+          //     borderRadius: BorderRadius.circular(20),
+          //     side: const BorderSide(color: Colors.black, width: 3),
+          //   ),
+          //   child: Image.asset(
+          //     'assets/internet_mark.png',
+          //     width: 30,
+          //     height: 30,
+          //   ),
+          // ),
+          // const SizedBox(height: 10),
           FloatingActionButton(
             onPressed: () {
               Navigator.push(
